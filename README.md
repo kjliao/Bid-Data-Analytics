@@ -1,3 +1,7 @@
+'''
+This Python script can process "big" data in the excel or csv format and 
+generates statstical output and figures (a barchart and pie chart)
+'''
 from langchain_core.tools import tool
 import pandas as pd
 import matplotlib.pyplot as plt
