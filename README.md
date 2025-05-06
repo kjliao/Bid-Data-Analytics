@@ -24,7 +24,7 @@ def bigdata(file_path, cat, var):
    plt.tight_layout()
    plt.show()
 
-   # Plot the pie chart
+   # Plot a pie chart for the percentages
    plt.figure(figsize=(8, 8))
    plt.pie(cat_percentages, labels=cat_percentages.index, autopct='%1.1f%%', startangle=140)
    plt.title(f'Distribution of {cat}')
@@ -38,7 +38,7 @@ def bigdata(file_path, cat, var):
         f"The percentage for each category is:\n{cat_percentages}."
     )
 
-# Use the tool
+# Use the tool and show the results
 result = bigdata.invoke({
     "file_path": "xxx.csv",
     "cat": "cat_xxx",
