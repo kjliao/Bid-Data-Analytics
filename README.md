@@ -16,7 +16,7 @@ def bigdata(file_path, cat, var):
    total_value = data[var].sum()
    cat_percentages = (cat_sums / total_value) * 100
    
-   # plot a bar chart for the percentages
+   # Plot a bar chart for the percentages
    cat_percentages.plot(kind='bar', figsize=(10, 6))
    plt.ylabel('Percentage (%)')
    plt.title('Percentage of Each Category')
