@@ -1,4 +1,4 @@
-# This Python script can process "big" data in the excel or csv format and generates statstical output and figures (a barchart and pie chart)
+# LangChain_bigdata.py processes "big" data in the excel or csv format and generates statstical output and figures.
 
 from langchain_core.tools import tool
 import pandas as pd
