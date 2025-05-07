@@ -1,4 +1,4 @@
-# LangChain_bigdata_agent.py can fetch data from websites and generates statstical output and figures.
+# LangChain_bigdata_agent.py can fetch data from websites and generate statstical output and figures.
 
 from langchain_core.tools import tool
 import pandas as pd
