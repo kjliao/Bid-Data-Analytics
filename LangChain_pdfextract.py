@@ -55,6 +55,10 @@ def pdfextract(pdf_path, keywords):
     else:
         return "No matching sentences found."
 
-file = list_files.invoke("directory_path")  
-result = pdfextract.invoke({"pdf_path":"directory_path", "keywords":"keywords for searching"})
+dir = input("Directory Path: ")
+keyword = input("Keyword for searching: ")
+
+file = list_files.invoke({"directory_path":dir})  
+result = pdfextract.invoke({"pdf_path":dir, "keywords":keyword})
 print(file)
+print(result)
