@@ -1,3 +1,11 @@
+'''
+This script reads data on the website, performs statistical analysis, and plot figures. 
+Below are input examples (via Q&A) for running the script: 
+# url: https://www2.census.gov/programs-surveys/popest/datasets/2020-2023/state/asrh/sc-est2023-alldata6.csv
+# var: POPESTIMATE2023
+# cat: RACE
+'''
+
 from langchain_core.tools import tool
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -48,13 +56,15 @@ def bigdata(url, cat, var):
         f"The total sum of the '{var}' column is {total_value}.\n"
         f"The percentage for each category is:\n{cat_percentages}."
         )
+
 # use the tool
-try:
-    result = bigdata.invoke({
-        "url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2023/state/asrh/sc-est2023-alldata6.csv",   
-        "cat": "RACE",
-        "var": "POPESTIMATE2023"
+url = input("Website: ")
+var = input("Variable: ")
+cat = input("Category: ")
+
+result = bigdata.invoke({
+        "url": url,   
+        "cat": cat,
+        "var": var
     })
-    print(result)
-except Exception as e:
-    print(f"Error: {str(e)}")
+print(result)
