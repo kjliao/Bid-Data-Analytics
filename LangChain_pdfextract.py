@@ -38,7 +38,7 @@ def pdfextract(pdf_path, keywords):
         # Split the text into sentences based on periods followed by a space, colons, and bullet points
         sentences = text.split('. ')
 
-        # Extract sentences containing the word "breast" and excluding those containing "www" and "Table of Contents"
+        # Extract sentences containing the keyword and excluding those containing "www" and "Table of Contents"
         for sentence in sentences:
             if keywords in sentence.lower() and "www" not in sentence.lower() and "table of contents" not in sentence.lower():
                 extracted_sentences.append({
