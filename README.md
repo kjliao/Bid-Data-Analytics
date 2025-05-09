@@ -1,15 +1,6 @@
 # LangChain_bigdata_agent.py can fetch data from websites and generate statstical output and figures.
-
-from langchain_core.tools import tool
-import pandas as pd
-import matplotlib.pyplot as plt
-
-from langchain.tools import Tool
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
-
+# 1. Load environment variables
+# 2. Define a tool
 @tool
 def bigdata(url, cat, var):
     """
@@ -50,7 +41,7 @@ def bigdata(url, cat, var):
         f"The total sum of the '{var}' column is {total_value}.\n"
         f"The percentage for each category is:\n{cat_percentages}."
         )
-# use the tool
+# 3. use the tool
 try:
     result = bigdata.invoke({
         "url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2023/state/asrh/sc-est2023-alldata6.csv",   
