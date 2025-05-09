@@ -19,7 +19,7 @@ def bigdata(url, cat, var):
     total_value = data[var].sum()
     cat_percentages = (cat_sums / total_value) * 100
             
-    # plot a bar chart for the percentages
+# 3. plot a bar chart for the percentages
     plt.figure(figsize=(10, 6))
     cat_percentages.plot(kind='bar')
     plt.ylabel('Percentage (%)')
@@ -41,7 +41,7 @@ def bigdata(url, cat, var):
         f"The total sum of the '{var}' column is {total_value}.\n"
         f"The percentage for each category is:\n{cat_percentages}."
         )
-# 3. use the tool
+# 4. use the tool
 try:
     result = bigdata.invoke({
         "url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2023/state/asrh/sc-est2023-alldata6.csv",   
