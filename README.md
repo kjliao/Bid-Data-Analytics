@@ -19,7 +19,7 @@ def bigdata(url, cat, var):
     total_value = data[var].sum()
     cat_percentages = (cat_sums / total_value) * 100
             
-# 3. plot a bar chart for the percentages
+# 3. plot a bar chart and a pie chart for the variables
     plt.figure(figsize=(10, 6))
     cat_percentages.plot(kind='bar')
     plt.ylabel('Percentage (%)')
