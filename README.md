@@ -1,5 +1,6 @@
 # LangChain_bigdata_agent.py can fetch data from websites and generate statstical output and figures.
 # 1. Load environment variables
+
 # 2. Define a tool
 @tool
 def bigdata(url, cat, var):
