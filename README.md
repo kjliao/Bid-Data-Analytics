@@ -1,5 +1,11 @@
 # LangChain_bigdata_agent.py can fetch data from websites and generate statstical output and figures.
 # 1. Load environment variables
+from langchain_core.tools import tool
+import pandas as pd
+import matplotlib.pyplot as plt
+
+from langchain.tools import Tool
+from dotenv import load_dotenv
 
 # 2. Define a tool
 @tool
